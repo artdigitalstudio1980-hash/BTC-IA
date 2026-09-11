@@ -1,0 +1,40 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Data
+pgdata/
+ollama_data/
+data/
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+.terraform.lock.hcl
+terraform/environments/*/.terraform.lock.hcl
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Superpowers
+.superpowers/
+
+# Logs
+*.log
+/tmp/btc-ai-kill
