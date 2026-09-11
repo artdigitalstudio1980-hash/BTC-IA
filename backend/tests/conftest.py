@@ -1,6 +1,10 @@
 import os
+# Must set before importing app.db so engine uses sqlite
 os.environ["DATABASE_URL"] = "sqlite:///./test.db"
-# Ensure tables exist before any test
+import importlib
+# Force reload if already imported with postgres URL
+import app.db as _db
+importlib.reload(_db)
 from app.db import init_db, Base, engine
 import pytest
 
