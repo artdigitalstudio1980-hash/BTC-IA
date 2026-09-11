@@ -15,10 +15,10 @@ provider "aws" {
 }
 
 module "github_repo" {
-  source   = "./modules/github-repo"
-  count    = var.github_owner != "" ? 1 : 0
-  repo_name = var.github_repo_name
-  owner     = var.github_owner
+  source      = "./modules/github-repo"
+  count       = var.github_owner != "" ? 1 : 0
+  repo_name   = var.github_repo_name
+  owner       = var.github_owner
   description = "BTC-AI — Copiloto cripto local-first: real-time data + Ollama + 3 modos + Binance Testnet"
 }
 

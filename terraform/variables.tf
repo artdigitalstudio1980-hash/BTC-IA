@@ -39,9 +39,13 @@ variable "aws_instance_type" {
 }
 
 variable "allowed_cidr" {
-  description = "CIDR permitido para acceder a 3000/8000 cuando enable_aws=true"
+  description = "CIDR permitido para acceder a 3000/8000 cuando enable_aws=true. CAMBIA a TU_IP/32 para prod"
   type        = string
   default     = "0.0.0.0/0"
+  validation {
+    condition     = var.enable_aws == false || can(cidrhost(var.allowed_cidr, 0))
+    error_message = "allowed_cidr debe ser CIDR válido, ej: 1.2.3.4/32"
+  }
 }
 
 variable "symbols" {
