@@ -17,6 +17,8 @@
     "postcss": "^8.5.23"
   },
   "devDependencies": {
-    "jest": "^30.5.1"
+    "@types/react": "19.3.0",
+    "jest": "^30.5.1",
+    "typescript": "5.8.2"
   }
 }
