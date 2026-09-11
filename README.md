@@ -1,0 +1,2 @@
+# BTC-IA
+ecosistema trading 
